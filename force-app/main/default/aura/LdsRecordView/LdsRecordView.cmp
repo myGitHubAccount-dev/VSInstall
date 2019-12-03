@@ -1,0 +1,17 @@
+<aura:component >
+    <!--force:recordView recordId='0032w0000021HzjAAE' / -->
+    
+    
+	<!--lightning:recordForm
+        recordId="0032w0000021HzjAAE"
+        objectApiName="Contact"
+        layoutType="Full"
+        mode="view" / -->
+    <!--lightning:recordViewForm recordId="0032w0000021HzjAAE" objectApiName="Contact">
+        <div class="slds-box">
+            <lightning:outputField fieldName="Name" />
+            <lightning:outputField fieldName="Email" />
+        </div>
+    </lightning:recordViewForm -->
+    
+</aura:component>

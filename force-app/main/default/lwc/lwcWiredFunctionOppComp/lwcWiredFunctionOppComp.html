@@ -1,0 +1,28 @@
+<!--
+  @File Name          : lwcWiredFunctionOppComp.html
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 11/22/2019, 11:47:53 AM
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    11/22/2019   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+-->
+<template>
+    <template if:true={oppsLst}>
+        <div  class="slds-box">
+            <div class="slds-box">
+                Wired Function
+            </div>
+            <template for:each={oppsLst} for:item="opp">
+                <div key={opp.Id} class="slds-box">
+                    {opp.Name} :: {opp.Amount} :: {opp.StageName}
+                </div>
+            </template>
+        </div>
+    </template>
+    <template if:true={error}>
+        {error}
+    </template>
+</template>

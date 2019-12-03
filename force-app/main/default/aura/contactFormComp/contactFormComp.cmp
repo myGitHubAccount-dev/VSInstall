@@ -1,0 +1,43 @@
+<aura:component controller="ContactController"
+                extends="c:genericServerCallComp"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction"
+                access="global">
+    
+	<!-- Define the attributes for the Contact Form-->
+    <aura:attribute name="contact" type="Contact" 
+                    default="{'sObjectType' : 'Contact'}"/>
+    <aura:attribute name="status" type="String" default="Draft" />
+    <aura:attribute name="check" type="Boolean"  />
+    
+    <!-- Form-->
+    <div class="slds-box slds-theme_shade">
+        <lightning:card title="Contact Form" >
+            
+            
+            <aura:set attribute="body">
+                <div>
+                    <lightning:input label="First Name" value="{! v.contact.FirstName}" />
+                    <lightning:input label="Last Name" value="{! v.contact.LastName}" 
+                                     required="true" 
+                                     placeholder="Type atleast 2 characters"
+                                     onchange="{! c.changeOnLastName}"/>
+                    
+                    <lightning:input label="Email" value="{! v.contact.Email}" />
+                </div>
+            </aura:set>
+            
+            <aura:set attribute = "footer">
+                <lightning:badge label="Status :: "  /> {! v.status}
+            </aura:set>
+            
+            <aura:set attribute = "actions">
+                <lightning:button label="Save" 
+                                  variant="brand" 
+                                  iconName="utility:save"
+                                  onclick="{! c.saveRecord}"
+                                  disabled="true"
+                                  aura:id="btn"/>
+            </aura:set>
+        </lightning:card>
+    </div>
+</aura:component>

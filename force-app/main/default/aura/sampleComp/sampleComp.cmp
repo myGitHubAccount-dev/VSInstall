@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPagetypes" >
+    <!-- Attribute Creation-->
+    <aura:attribute name="msg" type="String"  required="true" default="Welcome to our world from the Lightning Component!!!" />
+    <!-- Accessing component's attribute,
+         use v notation and {!} i.e., {!v.msg} 
+         v here is View , which is a Value Provider
+		 c is controller -->
+     {!v.msg} 
+</aura:component>

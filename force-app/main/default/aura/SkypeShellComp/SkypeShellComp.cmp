@@ -1,0 +1,14 @@
+<aura:component extends="c:genericServerCallComp"
+                controller="ContactController"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="phoneNumber" type="String" />
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="check" type="Boolean" />
+    
+    <!-- Define a aura handler to invoke controller.js  function upon initialization
+         of this component -->
+    <aura:handler name="init" value="{!this}" action="{!c.getPhone}" />
+    
+    <c:SkypeComp phoneNumber="{!v.phoneNumber}" />
+</aura:component>

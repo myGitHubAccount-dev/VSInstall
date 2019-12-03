@@ -1,0 +1,26 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+	<!-- Refer notifier component-->
+    <!-- Refer all handler component-->
+    <div class="slds-grid slds-wrap" >
+        <div class="slds-col slds-size_12-of-12">
+            <c:emergencyEventNotifier />
+        </div>
+        
+        <div class="slds-col slds-size_4-of-12">
+            <c:emergencyEventPoliceHandler />
+        </div>
+        
+        <div class="slds-col slds-size_4-of-12">
+            <c:emergencyEventAmbulanceHandler />
+        </div>
+        
+        <div class="slds-col slds-size_4-of-12">
+            <c:emergencyEventFireBrigadeHandler />
+        </div>
+    </div>
+    
+    
+    
+    
+    
+</aura:component>

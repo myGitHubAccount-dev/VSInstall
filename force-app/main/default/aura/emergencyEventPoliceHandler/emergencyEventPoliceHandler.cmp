@@ -1,0 +1,12 @@
+<aura:component>
+	
+    <aura:attribute name="receivedMessage" type="String" />
+    <!-- 1.Define an handler for c:emergencyEvent 
+		  i. NEVER specify name attribute -->
+    <aura:handler event="c:emergencyEvent" action= "{! c.handleSuituation}" />
+    
+    <!-- NEVER refer notifier-->
+    <div class="slds-box">
+        Police Handler Received Message : {! v.receivedMessage}
+    </div>
+</aura:component>

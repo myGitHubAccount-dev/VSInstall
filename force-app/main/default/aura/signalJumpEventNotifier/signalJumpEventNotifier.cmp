@@ -1,0 +1,11 @@
+<aura:component >
+	<!-- 1.Register for the event using aura:registerEvent
+		  i. Name - this is mandatory and used to refer this evet instance
+		  ii. Type - specify name of the event along with namespace -->
+    <aura:registerEvent name="signalJump" type="c:signalJumpEvent" />
+    
+    <!-- 2. Perform an action to fire the event -->
+    <lightning:button  label="Send Message" onclick="{! c.sendMessage}" />
+    
+    
+</aura:component>

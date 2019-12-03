@@ -1,0 +1,67 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPagetypes">
+    <!-- Defining two attribute of Integer datatype -->
+    <aura:attribute name="firstNumber" type="Integer" required="true" default="20" description="This attribute is used to store the first value" />
+    <aura:attribute name="secondNumber" type="Integer" required="true" default="10" description="This attribute is used to store the second value" />
+    <aura:attribute name="result" type="Double" required="false" default="0" />
+    <!-- Refer the sampleComp -->
+    
+    <div class="slds-box">
+    <c:sampleComp msg="Simple Calculator"/>
+    <!-- Perform Arithmatic Operation
+		 20 + 10 = 30
+		 20 - 10 = 10 
+         20 * 10 = 200
+         20 / 10 = 2 -->
+    <br />
+<!--
+	<div>
+        Addition: {!v.input1} + {!v.input2} = {! v.input1 + v.input2}
+    </div>
+    
+    <div>
+        Subtraction: {!v.input1} - {!v.input2} = {! v.input1 - v.input2}
+    </div>
+    
+    <div>
+        Multiplication: {!v.input1} * {!v.input2} = {! v.input1 * v.input2}
+    </div>
+    
+    <div>
+        Division: {!v.input1} / {!v.input2} = {! v.input1 / v.input2}
+    </div>
+-->
+    <div>
+        <lightning:button label="Addition"
+                          variant="brand"
+                          iconName="utility:add"
+                          onclick="{!c.add}"/>
+        
+        <lightning:button label="Subtraction"
+                          variant="neutral"
+                          iconName="utility:dash"
+                          onclick="{!c.subtract}"/>
+        
+        <lightning:button label="Multiplication"
+                          variant="success"
+                          iconName="utility:close"
+                          onclick="{!c.multiply}"/>
+        
+        <lightning:button label="Division"
+                          variant="destructive"
+                          iconName="utility:close"
+                          onclick="{!c.division}"/>
+    </div>
+    
+    <div >
+        <lightning:input label = "First Number" type="Number" value="{!v.firstNumber}" />
+        <lightning:input label = "Second Number" type="Number" value="{!v.secondNumber}" />
+    </div>
+    
+    <div title="result" class="result">
+        
+           The result is = {!v.result}
+        
+    </div>
+    </div>
+    
+</aura:component>

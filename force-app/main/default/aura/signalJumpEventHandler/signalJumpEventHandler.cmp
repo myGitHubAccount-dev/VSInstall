@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+	<!-- 1.Define this component has handler for signalJumpEvent using aura:handler
+		  i. name - MUST have same value as mentioned in the notifier
+          ii. event - MUST match with type as mentioned in the notifier
+		  iii. action - JavaScript function that is invoked when the event is fired -->
+    <aura:handler name="signalJump" event="c:signalJumpEvent" action="{! c.handleMessage}" />
+    
+    <!-- Refer Notifier Component-->
+    <c:signalJumpEventNotifier />
+    
+</aura:component>

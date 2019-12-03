@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>Simple Calculator Documentation</aura:description>
+	<aura:example name="calculator" ref="c:calculatorComp" label="Label">
+        
+	</aura:example>
+</aura:documentation>

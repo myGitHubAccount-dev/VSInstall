@@ -1,0 +1,32 @@
+<apex:page >
+    <!-- 1. Include lightning-->
+    <apex:includeLightning />
+    
+    <!-- 2. Define a <div> tag along with the id atrribute,this tag acts as a place holder 
+            for lightning components -->
+    <div id="lc" />
+        
+    <!-- 3. Load standalone application via $Lightning.use() function
+            arguments: i)Name of the apllication along with namespace
+                       ii) A JavaScript callback function -->
+    <script>
+    	$Lightning.use("c:lightningOutApp",function(){
+                   $Lightning.createComponent("c:calculatorComp",
+                       							{"firstNumber" : 25,
+                       							 "secondNumber" : 10
+                       							}, "lc");
+        		   $Lightning.createComponent("c:OpportunityComp2",{}, "lc");
+    });
+    //alert('Hello');
+    </script>
+    
+    <!-- 4. Create instance of lightning component using $Lightning.createComponent() function
+          arguments: i) Name of the component along with the namespace
+                     ii) Attribute if any, in JSON format, if none specify {}
+                     iii) Place holder's id - that is div tags id
+                     iv) JavaScript callback function-->
+					   
+   
+    
+    
+</apex:page>

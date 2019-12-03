@@ -1,0 +1,21 @@
+<aura:component >
+    <!-- Button Section-->
+	<div>
+    	<lightning:button label="Sun" onclick="{!c.handleClick}" aura:id="1" />
+    	<lightning:button label="Moon" onclick="{!c.handleClick}" aura:id="2" />
+    </div>
+    
+    <!-- Image Section-->
+    <div>
+    	
+        <div class="slds-hide" aura:id="sunDiv">
+            <c:buttonExampleComp1 />
+        </div>
+        
+        <div class="slds-hide" aura:id="moonDiv">
+        	<c:buttonExampleComp2 />
+        </div>
+        
+    </div>
+    
+</aura:component>

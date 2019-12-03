@@ -1,0 +1,54 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+	<lightning:tabset variant="scoped">
+        <lightning:tab title="Calc" label="Calculator" > 
+            <c:calculatorComp />
+        </lightning:tab>
+        
+        <lightning:tab title="Account" label="Account">
+            <c:AccountComp />
+        </lightning:tab>
+        
+        <lightning:tab title="Opportunity" label="Opportunity">
+            <c:OpportunityComp3 />
+        </lightning:tab>
+        
+        <lightning:tab title="Button" label="Button">
+            <c:buttonExampleComp />
+        </lightning:tab>
+        
+        <lightning:tab title="Cards" label="Cards">
+            <c:deckOfCardsComp />
+        </lightning:tab>
+        
+        <lightning:tab title="Menu" label="Menu">
+            <c:buttonMenuComp />
+        </lightning:tab>
+        
+        <lightning:tab title="Layout" label="Layout">
+            <c:layoutExampleComp />
+        </lightning:tab>
+        
+        <lightning:tab title="Modal" label="Modal">
+            <c:modalComp title="New Modal" >
+                 Welcome to Modal Component!! 
+            </c:modalComp>
+        </lightning:tab>
+        
+        <lightning:tab title="Component Event" label="Component Event">
+            <c:signalJumpEventHandler />
+        </lightning:tab>
+        
+        <lightning:tab title="Application Event" label="Application Event">
+            <c:emergencyEventContainer />
+        </lightning:tab>
+        
+        <lightning:tab title="Aura-LWC" label="Aura-LWC">
+            <c:lwcOppComp />
+        </lightning:tab>
+        
+        <lightning:tab title="Opp Comp" label="Opp Comp">
+            <c:OpportunityComp2 />
+        </lightning:tab>
+        
+    </lightning:tabset>
+</aura:component>

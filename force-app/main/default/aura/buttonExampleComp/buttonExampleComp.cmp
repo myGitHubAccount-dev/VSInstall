@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <lightning:button label="B1" onclick="{!c.handleClick}" aura:id="1" />
+    <lightning:button label="B2" onclick="{!c.handleClick}" aura:id="2" />
+    <lightning:button label="B3" onclick="{!c.handleClick}" aura:id="3" />
+    <lightning:button label="B4" onclick="{!c.handleClick}" aura:id="4" />
+</aura:component>

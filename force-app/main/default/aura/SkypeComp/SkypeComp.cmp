@@ -1,0 +1,6 @@
+<aura:component>
+    <aura:attribute name="phoneNumber" type="Integer" default="9988776655" />
+    <a href="{! 'tel:' +v.phoneNumber}" > <!-- tel for skype, mail for outlook-->
+        <img src="{! $Resource.skypeLogo}" />
+    </a>
+</aura:component>

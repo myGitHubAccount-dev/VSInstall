@@ -1,0 +1,5 @@
+<!-- Abstract component can only be extended but NEVER referenced directly from anywhere-->
+<aura:component abstract="true">
+    <!-- Refer body attribute so that it will include child component's body-->
+    {!v.body}
+</aura:component>

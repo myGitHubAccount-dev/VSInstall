@@ -1,0 +1,32 @@
+<aura:component controller="OpportunityController" implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="allOpportunity" type="List" />
+    <aura:attribute name="wonOpportunity" type="List" />
+    <aura:attribute name="check" type="Boolean" />
+    
+    <div>
+        <lightning:button label="Get All Opps" onclick="{!c.getAllOpps}" />
+        <lightning:button label="Get Won Opps" onclick="{!c.getWonOpps}" />
+    </div>
+    
+    <div>
+        <aura:if isTrue="{!v.check}">
+        <table class="slds-table slds-table_bordered" >
+        <thead>
+            	<th>Name</th> 
+            	<th>Amount</th> 
+            	<th>Stage</th> 
+        </thead>
+        <tbody>
+        <aura:iteration items="{!v.allOpportunity}" var="opp">
+            
+            <tr>
+                <td> {! opp.Name} </td>
+                <td> {! opp.Amount} </td>
+                <td> {! opp.StageName} </td>
+            </tr>
+        </aura:iteration>
+             </tbody>
+        </table>
+         </aura:if>  
+    </div>
+</aura:component>

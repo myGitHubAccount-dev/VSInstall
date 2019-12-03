@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="contactRec" type="Contact" />
+    <aura:attribute name="error" type="String"/>
+    
+    <force:recordData recordId="{! v.recordId}"
+                      fields="Name,FirstName,LastName,Email"
+                      targetFields="{!v.contactRec}"
+                      targetError="{!v.error}"
+                      />
+    <div class="slds-box">
+        <div class="slds-box slds-align_absolute-center slds-text-heading_medium">
+            LDS recordData
+        </div>
+            <lightning:card title="{! v.contactRec.Name}" footer="All Rights Reserved">
+        
+   			 </lightning:card>
+        
+    </div>
+    
+</aura:component>

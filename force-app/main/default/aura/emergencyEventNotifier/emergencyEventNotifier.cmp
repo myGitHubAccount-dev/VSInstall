@@ -1,0 +1,14 @@
+<aura:component >
+    
+    <aura:attribute name="inputFromUser" type="String" default="emergency Alert"/>
+    
+    <!-- Register event but name attribute will not be used any where-->
+    <aura:registerEvent name="dummy" type="c:emergencyEvent" />
+    
+    <div class="slds-box">
+        <lightning:input label="Message to send" value="{! v.inputFromUser}"/>
+        <!-- Perform action-->
+        <lightning:button label="Dial 911" onclick="{! c.dial911}" />
+    </div>
+    
+</aura:component>

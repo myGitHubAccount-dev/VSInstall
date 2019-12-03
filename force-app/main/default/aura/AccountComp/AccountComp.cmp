@@ -1,0 +1,35 @@
+<aura:component controller="AccountController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:attribute name="allAccount" type="List" />
+    <aura:attribute name="caAccount" type="List" />
+    <aura:attribute name="check" type="Boolean" />
+    <aura:attribute name="delCheck" type="Boolean" default="true" />
+    
+    <div>
+        <lightning:button label="Get All Account" onclick="{!c.getAllAccts}" />
+        <lightning:button label="Get CA Account" onclick="{!c.getCaAccts}" />
+        <lightning:button label="Delete Table" variant="destructive" onclick="{!c.deleteTable}" />
+    </div>
+    
+    <div>
+        <aura:if isTrue="{!v.check}">
+        <table class="slds-table slds-table_bordered" >
+        <thead>
+            	<th>Name</th> 
+            	<th>Type</th> 
+            	<th>Billing State</th> 
+        </thead>
+        <tbody>
+        <aura:iteration items="{!v.allAccount}" var="acct">
+            
+            <tr>
+                <td> {! acct.Name} </td>
+                <td> {! acct.Type} </td>
+                <td> {! acct.BillingState} </td>
+            </tr>
+        </aura:iteration>
+             </tbody>
+        </table>
+         </aura:if>
+        
+    </div>
+</aura:component>
