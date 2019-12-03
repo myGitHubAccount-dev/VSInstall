@@ -1,5 +1,6 @@
 public class OpportunityController {
 
+    //Method to retrieve all Opportunities
     @AuraEnabled(cacheable=true)
     public static List<Opportunity> getAllOpportunityServ() {
        List<Opportunity> oppLst = new List<Opportunity>([SELECT Id, Name, Amount, StageName 
@@ -7,6 +8,7 @@ public class OpportunityController {
         return oppLst;
     }
     
+    //Method to retrieve only Won Opportunities
     @AuraEnabled(cacheable=true)
     public static List<Opportunity> getWonOpportunityServ() {
        List<Opportunity> oppLst = new List<Opportunity>([SELECT Id, Name, Amount, StageName 
