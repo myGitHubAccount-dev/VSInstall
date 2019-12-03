@@ -8,6 +8,7 @@ public class OpportunityController {
         return oppLst;
     }
     
+    
     //Method to retrieve only Won Opportunities
     @AuraEnabled(cacheable=true)
     public static List<Opportunity> getWonOpportunityServ() {
